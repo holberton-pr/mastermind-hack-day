@@ -51,8 +51,3 @@ $
 ## Blog Post
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis auctor elit sed vulputate mi sit. Nulla porttitor massa id neque aliquam vestibulum. Ultrices gravida dictum fusce ut placerat orci. Et netus et malesuada fames ac. Nullam non nisi est sit amet facilisis magna etiam tempor. Pretium lectus quam id leo in vitae turpis. Mauris sit amet massa vitae tortor condimentum lacinia. Non curabitur gravida arcu ac. Cras adipiscing enim eu turpis egestas pretium aenean pharetra. Eget arcu dictum varius duis at consectetur lorem donec.
-
-## Contributors
-
-* bullet 1  |  java
-* bullet 2  |  javascript
