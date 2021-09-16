@@ -47,12 +47,14 @@ class mastermind {
                     System.out.println("It took you " + num_of_tries + " tries!");
                   }
 
+                  System.out.println("Start...");
                   String number = new String(String.valueOf(usr_number));
                   System.out.println(number.getClass().getName());
                   System.out.println(number.substring(0, 1));
                   System.out.println(number.substring(1, 2));
                   System.out.println(number.substring(2, 3));
                   System.out.println(number.substring(3, 4));
+                  System.out.println("End...");
                 }
 
       }
