@@ -42,7 +42,7 @@ $ git clone https://github.com/cmdelcarmen/mastermind-hack-day.git
 $ cd mastermind-hack-day
 
 # next step
-$ java mastermind.c
+$ java mastermind.java
 ```
 Note: Please make sure you have java downloaded. The command ```java --version``` can help you see which version of java your system has.
 
