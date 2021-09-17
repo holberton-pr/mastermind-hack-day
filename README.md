@@ -22,15 +22,11 @@
 
 ## The Challenge
 
-* bullet 1
-  - bullet 1.5
-* bullet 2
-  - bullet 2.5
-* bullet 3
+* Build the game Mastermind in any language of our choice. I chose to use Java, it was my first time ever using it. 
 
 ## How To Play
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis auctor elit sed vulputate mi sit. Nulla porttitor massa id neque aliquam vestibulum. Ultrices gravida dictum fusce ut placerat orci. Et netus et malesuada fames ac. Nullam non nisi est sit amet facilisis magna etiam tempor. Pretium lectus quam id leo in vitae turpis. Mauris sit amet massa vitae tortor condimentum lacinia. Non curabitur gravida arcu ac. Cras adipiscing enim eu turpis egestas pretium aenean pharetra. Eget arcu dictum varius duis at consectetur lorem donec.
+https://en.wikipedia.org/wiki/Mastermind
 
 ## Installation
 
@@ -46,6 +42,6 @@ $ java mastermind.java
 ```
 Note: Please make sure you have java downloaded. The command ```java --version``` can help you see which version of java your system has.
 
-## Blog Post
+## Github Page
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis auctor elit sed vulputate mi sit. Nulla porttitor massa id neque aliquam vestibulum. Ultrices gravida dictum fusce ut placerat orci. Et netus et malesuada fames ac. Nullam non nisi est sit amet facilisis magna etiam tempor. Pretium lectus quam id leo in vitae turpis. Mauris sit amet massa vitae tortor condimentum lacinia. Non curabitur gravida arcu ac. Cras adipiscing enim eu turpis egestas pretium aenean pharetra. Eget arcu dictum varius duis at consectetur lorem donec.
+https://cmdelcarmen.github.io/mastermind-hack-day/
