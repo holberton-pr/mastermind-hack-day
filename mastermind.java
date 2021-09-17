@@ -27,7 +27,7 @@ class mastermind {
     //declares variable used for collecting user input
     Scanner usr_input = new Scanner (System.in);
     int usr_number = 0;
-    int num_of_tries = 7;
+    int num_of_tries = 20;
 
     //Welcome prompts
     System.out.println("Welcome to Mastermind!");
@@ -44,9 +44,8 @@ class mastermind {
       System.out.println("You're a mastermind! You got the right number on your first try!");
       System.exit(0);
     }
-    display_correct_spots(code, usr_number);
+    count_correct_spots(code, usr_number);
 
-    //del while (code != usr_number)
     while(num_of_tries != 0)
     {
       System.out.println("You have " + num_of_tries + " tries left!\n");
@@ -58,10 +57,10 @@ class mastermind {
         System.out.println("Congrats! You've found the secret code. You are a mastermind.");
         System.exit(0);
       }
-
-      display_correct_spots(code, usr_number);
+      count_correct_spots(code, usr_number);
     }
     System.out.println("GAME OVER.\nThe code was " + code  + ". Thanks for playing!");
+
   }
 
   /*
@@ -95,10 +94,10 @@ class mastermind {
    * For example: If the code is "2222" and the use enters "1234",
    * then "X2XX" will print out.
    */
-  public static void display_correct_spots(int code, int usr_number){
+  public static void count_correct_spots(int code, int usr_number){
     String u_number = new String(String.valueOf(usr_number));
     String g_code = new String(String.valueOf(code));
-    int numbers_right = 0;
+    int numbers_right = 0, numbers_almost_right = 0;
     char[] positions = {'X', 'X', 'X', 'X'};
 
     if (u_number.substring(0, 1).equals(g_code.substring(0, 1))){
@@ -119,7 +118,34 @@ class mastermind {
       numbers_right++;
     }
 
-    System.out.println("You got " + numbers_right + " digit(s) correct!");
-    System.out.println(Arrays.toString(positions));
+    numbers_almost_right = check_if_in_code(g_code, u_number);
+
+    System.out.println("You got " + numbers_almost_right + " digit(s) correct.");
+    System.out.println("You got " + numbers_right + " digit(s) in the correct position.");
+  }
+
+  /*
+   * Method returns the numbers of times the numbers the user
+   * entered appear in the code
+   */
+  public static int check_if_in_code(String code, String usr_number) {
+    int idx = 0, numbers_almost_right = 0;
+    char arr[] = {0, 0, 0, 0};
+
+    for (idx = 0; idx < 4; idx++) {
+      arr[idx] = code.charAt(idx);
+    }
+    for (idx = 0; idx < 4; idx++) {
+      for (int idx2 = 0; idx2 < 4; idx2++) {
+        if (arr[idx] == usr_number.charAt(idx2)) {
+          numbers_almost_right++;
+          break;
+        }
+      }
+    }
+    //System.out.println(arr);
+    //System.out.println(usr_number.charAt(idx));
+
+    return numbers_almost_right;
   }
 }
