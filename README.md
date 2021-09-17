@@ -22,7 +22,7 @@
 
 ## The Challenge
 
-* Build the game Mastermind in any language of our choice. I chose to use Java, it was my first time ever using it. 
+Build the game Mastermind in any language of our choice. I chose to use Java, it was my first time ever using it. 
 
 ## How To Play
 
