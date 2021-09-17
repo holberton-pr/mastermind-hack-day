@@ -9,6 +9,7 @@
 
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.Scanner;
+import java.util.Arrays;
 import java.lang.String;
 import java.lang.System;
 
@@ -26,13 +27,14 @@ class mastermind {
     //declares variable used for collecting user input
     Scanner usr_input = new Scanner (System.in);
     int usr_number = 0;
-    int num_of_tries = 1;
+    int num_of_tries = 7;
 
     //Welcome prompts
     System.out.println("Welcome to Mastermind!");
     System.out.println("For questions about to play the game please visit: ");
     System.out.println("https://en.wikipedia.org/wiki/Mastermind_(board_game)");
-    System.out.println("To quit game type 55555, 5 consecutive 5's\n");
+    System.out.println("To quit game type 55555, 5 consecutive 5's");
+    System.out.println("----------------------------------------------------\n");
 
     prompt();
     // Gets user input
@@ -44,20 +46,22 @@ class mastermind {
     }
     display_correct_spots(code, usr_number);
 
-    while (code != usr_number)
+    //del while (code != usr_number)
+    while(num_of_tries != 0)
     {
+      System.out.println("You have " + num_of_tries + " tries left!\n");
       prompt();
       usr_number = usr_input.nextInt();
-      num_of_tries++;
+      num_of_tries--;
 
       if (compare(code, usr_number) == 1) {
         System.out.println("Congrats! You've found the secret code. You are a mastermind.");
-        System.out.println("It took you " + num_of_tries + " tries!");
         System.exit(0);
       }
 
       display_correct_spots(code, usr_number);
     }
+    System.out.println("GAME OVER.\nThe code was " + code  + ". Thanks for playing!");
   }
 
   /*
@@ -95,32 +99,27 @@ class mastermind {
     String u_number = new String(String.valueOf(usr_number));
     String g_code = new String(String.valueOf(code));
     int numbers_right = 0;
+    char[] positions = {'X', 'X', 'X', 'X'};
 
     if (u_number.substring(0, 1).equals(g_code.substring(0, 1))){
-      System.out.print(u_number.substring(0, 1));
+      positions[0] = u_number.substring(0, 1).charAt(0);
       numbers_right++;
-    } else {
-      System.out.print("X");
     }
     if (u_number.substring(1, 2).equals(g_code.substring(1, 2))){
-      System.out.print(u_number.substring(1, 2));
+      positions[1] = u_number.substring(1, 2).charAt(0);
       numbers_right++;
-    } else {
-      System.out.print("X");
     }
     if (u_number.substring(2, 3).equals(g_code.substring(2, 3))){
-      System.out.print(u_number.substring(2, 3));
+      positions[2] = u_number.substring(2, 3).charAt(0);
       numbers_right++;
-    } else {
-      System.out.print("X");
     }
+
     if (u_number.substring(3, 4).equals(g_code.substring(3, 4))){
-      System.out.print(u_number.substring(3, 4));
+      positions[3] = u_number.substring(3, 4).charAt(0);
       numbers_right++;
-    } else {
-      System.out.print("X");
     }
-    System.out.println();
-    System.out.println("You got " + numbers_right + " digit(s) correct!\n");
+
+    System.out.println("You got " + numbers_right + " digit(s) correct!");
+    System.out.println(Arrays.toString(positions));
   }
 }
