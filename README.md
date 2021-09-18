@@ -1,6 +1,8 @@
 # Holberton Mastermind Challenge.
 ---------------------------------
 
+https://holberton-pr.github.io/mastermind-hack-day/
+
 ## ○ How to Play - What is the Mastermind game?
 Mastermind consists of two players, the code maker and the code braker. The code maker has to create a code, typically an
 arrangement of 4 differed colored game tokens. The code braker's role is to try to figure out the color sequence, they have
