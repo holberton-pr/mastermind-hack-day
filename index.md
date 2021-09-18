@@ -66,7 +66,9 @@ Things I found useful about using Java:<br>
   - ``String.valueOf()`` -> Casting to a variable to a string
   - ``.substring(<range>)`` -> Getting a specific index of a string withing a range
   - ``.charAt(<index>)`` -> Getting a number at a specific index of an integer
-  - A resemblance to C, which made me able to pick it up faster. 
+  - 
+* A resemblance to C, which made me able to pick it up faster. 
+* Objects
 
 ### ○ Contributors and languages used:
 * Caroline Del Carmen C14 Github: cmdelcarmen - Java 14
