@@ -24,40 +24,35 @@ class mastermind {
 
     // Generates a random number between 1000 and 9999
     int code = ThreadLocalRandom.current().nextInt(1000, 10000);
-    //declares variable used for collecting user input
-    Scanner usr_input = new Scanner (System.in);
-    int usr_number = 0;
-    int num_of_tries = 20;
+    int usr_code = 0, num_of_tries = 20;
 
-    //Welcome prompts
     System.out.println("Welcome to Mastermind!");
     System.out.println("For questions about to play the game please visit: ");
     System.out.println("https://en.wikipedia.org/wiki/Mastermind_(board_game)");
-    System.out.println("To quit game type 55555, 5 consecutive 5's");
+    System.out.println("To quit game type -1.");
     System.out.println("----------------------------------------------------\n");
 
-    prompt();
     // Gets user input
-    usr_number = usr_input.nextInt();
+    usr_code = prompt_and_validate();
 
-    if (compare(code, usr_number) == 1) {
-      System.out.println("You're a mastermind! You got the right number on your first try!");
+    if (compare(code, usr_code) == 1) {
+      System.out.println("You're a mastermind! You cracked the code on your first try!");
       System.exit(0);
     }
-    count_correct_spots(code, usr_number);
+    // Displays the hints for the user
+    count_correct_spots(code, usr_code);
 
     while(num_of_tries != 0)
     {
       System.out.println("You have " + num_of_tries + " tries left!\n");
-      prompt();
-      usr_number = usr_input.nextInt();
+      usr_code = prompt_and_validate();
       num_of_tries--;
 
-      if (compare(code, usr_number) == 1) {
-        System.out.println("Congrats! You've found the secret code. You are a mastermind.");
+      if (compare(code, usr_code) == 1) {
+        System.out.println("Congrats! You've found the secret code." + code + ". You are a mastermind.");
         System.exit(0);
       }
-      count_correct_spots(code, usr_number);
+      count_correct_spots(code, usr_code);
     }
     System.out.println("GAME OVER.\nThe code was " + code  + ". Thanks for playing!");
 
@@ -66,8 +61,18 @@ class mastermind {
   /*
    * Method prints out prompt: "Please enter a 4 digit number:"
    */
-  public static void prompt(){
-    System.out.print("Please enter a 4 digit number: ");
+  public static int prompt_and_validate(){
+    int usr_code = 0;
+    Scanner input = new Scanner (System.in);
+    String usr_code_str = "";
+
+    while (usr_code_str.length() != 4 && usr_code != -1)
+    {
+      System.out.print("Please enter a 4 digit number: ");
+      usr_code = input.nextInt();
+      usr_code_str = new String(String.valueOf(usr_code));
+    }
+    return usr_code;
   }
 
   /*
@@ -77,7 +82,8 @@ class mastermind {
    */
   public static int compare(int code, int usr_number){
 
-    if (usr_number == 55555) {
+    // Players type -1 to exit
+    if (usr_number == -1) {
       System.out.println("The code was " + code + ". Thank you for playing!");
       System.exit(0);
     }
@@ -98,26 +104,12 @@ class mastermind {
     String u_number = new String(String.valueOf(usr_number));
     String g_code = new String(String.valueOf(code));
     int numbers_right = 0, numbers_almost_right = 0;
-    char[] positions = {'X', 'X', 'X', 'X'};
 
-    if (u_number.substring(0, 1).equals(g_code.substring(0, 1))){
-      positions[0] = u_number.substring(0, 1).charAt(0);
-      numbers_right++;
+    for (int idx = 0; idx < 4; idx++) {
+      if (u_number.substring(idx, idx + 1).equals(g_code.substring(idx, idx +1))){
+        numbers_right++;
+      }
     }
-    if (u_number.substring(1, 2).equals(g_code.substring(1, 2))){
-      positions[1] = u_number.substring(1, 2).charAt(0);
-      numbers_right++;
-    }
-    if (u_number.substring(2, 3).equals(g_code.substring(2, 3))){
-      positions[2] = u_number.substring(2, 3).charAt(0);
-      numbers_right++;
-    }
-
-    if (u_number.substring(3, 4).equals(g_code.substring(3, 4))){
-      positions[3] = u_number.substring(3, 4).charAt(0);
-      numbers_right++;
-    }
-
     numbers_almost_right = check_if_in_code(g_code, u_number);
 
     System.out.println("You got " + numbers_almost_right + " digit(s) correct.");
@@ -143,9 +135,6 @@ class mastermind {
         }
       }
     }
-    //System.out.println(arr);
-    //System.out.println(usr_number.charAt(idx));
-
     return numbers_almost_right;
   }
 }
