@@ -21,7 +21,7 @@ Develop at least one version Mastermind in the language of your choice. Each gam
 
 If players chose to do it in a language they are not familiar with, another challange then involes learning the new langauge.
 
-## ○ List of langages used:
+## ○ List of languages used:
 * Java
 
 ## ○ Java
