@@ -17,13 +17,17 @@ tokens and 2 white ones. Since 2 are in the right place and 2 are the right colo
 ![image](https://user-images.githubusercontent.com/77739870/133868031-8ac78ef4-7a4a-4f59-b66c-1866cfc1d4f0.png)  
 
 ## ○ The Challenge:
-Develop at least one version Mastermind in the language of your choice. Each game can be one player (against a bot) or 2 players.
-You are free of the number of columns, colors and turns.
+Develop at least one version Mastermind in the language of your choice. Each game can be one player (against a bot) or 2 players. You are free of the number of columns, colors and turns.
+
+If players chose to do it in a language they are not familiar with, another challange then involes learning the new langauge.
 
 ## ○ List of langages used:
 * Java
 
 ## ○ Java
+
+By Caroline Del Carmen. Java level: Beginner, first time using Java.
+
 I used Java 14 to write a program that allows an user to play Mastermind against a bot.
 You can check out https://github.com/cmdelcarmen/mastermind-hack-day for how to install and play.
 Below is a screenshot of the gameplay: <br>
@@ -56,7 +60,13 @@ After the hints are given, I tell the user whether they cracked the code or how 
 
 
 Things I found useful about using Java:<br>
-*
+* The useful tools: 
+  - ``ThreadLocalRandom.current().nextInt(<range>)`` -> Generating a random number within a given range
+  - ``.length()`` -> Getting the lenght of a string
+  - ``String.valueOf()`` -> Casting to a variable to a string
+  - ``.substring(<range>)`` -> Getting a specific index of a string withing a range
+  - ``.charAt(<index>)`` -> Getting a number at a specific index of an integer
+  - A resemble to C, which made me able to pick it up faster. 
 
 ### ○ Contributors and languages used:
 * Caroline Del Carmen C14 Github: cmdelcarmen - Java
