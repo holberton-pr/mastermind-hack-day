@@ -40,7 +40,7 @@ My method ``prompt_and_validate`` takes user input and verifies the player only 
 <br>
 
 The program then checks to see if the code entered by the user was the correct one, if it wasn't then the program
-calls my ``count_coorect_spots`` method to give the user some hints. It converts the code and the user's guess into
+calls my ``count_correct_spots`` method to give the user some hints. It converts the code and the user's guess into
 strings:<br>
 ![image](https://user-images.githubusercontent.com/77739870/133869083-e2d6f010-1f0d-49ec-8969-49eba60b32a6.png)  
 Then it compares every index of both strings in order to evalute which numbers the player guessed in the right position.<br>
