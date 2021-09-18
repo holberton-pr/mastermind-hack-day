@@ -49,8 +49,9 @@ number of numbers they guessed correctly, reguardless of postition. For that I w
 The method parses through both numbers, the code and the user's guess and counts the number of times each number in the
 user's guess appears in the code, in order to return number of correct guesses the user made. I use ``.charAt()`` to retrieve the numbers at a specifi index. I break once a match is found to avoid duplicate sums, for codes like '5454' for example. If the user guesses '5467' I was to make sure my mothod returns 2, and not 4.
 
-After the hints are given, I tell the user whether they cracked the code or how many attempts they have left. Finally, I repeat the process. At any moment the user can enter -1 to give up and reveal the code. 
+After the hints are given, I tell the user whether they cracked the code or how many attempts they have left. Finally, I repeat the process. At any moment the user can enter -1 to give up and reveal the code. <br>
 ![image](https://user-images.githubusercontent.com/77739870/133869370-ab86c456-d3a6-4cee-9960-cc0da6826c6c.png)    
+
 
 
 Things I found useful about using Java:
