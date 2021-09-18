@@ -1,9 +1,14 @@
-## Holberton Mastermind Challenge.
+# Holberton Mastermind Challenge.
 
 List of langages used:
-* <a href="Java 14">Java</a> 
+* <a href="Java 14">Java</a>
+<p align="center">
+  <a href="Java">Java</a> •
+  <a href="#Blog-Post">Blog Post</a> •
+  <a href="#Contributors">Contributors</a>
+</p> 
 
-### The Challenge:
+## The Challenge:
 
 * Develop at least one version Mastermind in the language of your choice.
 
@@ -27,7 +32,7 @@ Syntax highlighted code block
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Java 14 
+## Java 
 
 Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/cmdelcarmen/mastermind-hack-day/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
