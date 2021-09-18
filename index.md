@@ -14,7 +14,7 @@ For example, according to the image below:
 If the code is ```red blue green pink``` and the code braker guesses ``red green blue pink`` then the code maker will place 2 black
 tokens and 2 white ones. Since 2 are in the right place and 2 are the right color but wrong location.
 
-![image](https://user-images.githubusercontent.com/77739870/133868031-8ac78ef4-7a4a-4f59-b66c-1866cfc1d4f0.png)
+![image](https://user-images.githubusercontent.com/77739870/133868031-8ac78ef4-7a4a-4f59-b66c-1866cfc1d4f0.png)  
 
 ## ○ The Challenge:
 Develop at least one version Mastermind in the language of your choice. Each game can be one player (against a bot) or 2 players.
@@ -27,12 +27,12 @@ You are free of the number of columns, colors and turns.
 I used Java 14 to write a program that allows an user to play Mastermind against a bot.
 You can check out https://github.com/cmdelcarmen/mastermind-hack-day for how to install and play.
 Below is a screenshot of the gameplay:
-![image](https://user-images.githubusercontent.com/77739870/133868800-8c5a6928-ca98-4650-b176-4981d76f3d69.png)
+![image](https://user-images.githubusercontent.com/77739870/133868800-8c5a6928-ca98-4650-b176-4981d76f3d69.png)  
 <br>
 
 The program starts with giving the player a few instructions and asking them to enter their four digit attempt.
 My method ``prompt_and_validate`` takes user input and verifies the player only entered four digits:
-![image](https://user-images.githubusercontent.com/77739870/133868877-86f66d56-7f2e-4e5d-a496-3e085d9390d8.png)
+![image](https://user-images.githubusercontent.com/77739870/133868877-86f66d56-7f2e-4e5d-a496-3e085d9390d8.png)  
 <br>
 
 The program then checks to see if the code entered by the user was the correct one, if it wasn't then the program
