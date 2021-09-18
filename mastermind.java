@@ -49,7 +49,7 @@ class mastermind {
       num_of_tries--;
 
       if (compare(code, usr_code) == 1) {
-        System.out.println("Congrats! You've found the secret code." + code + ". You are a mastermind.");
+        System.out.println("Congrats! You've found the secret code " + code + ". You are a mastermind.");
         System.exit(0);
       }
       count_correct_spots(code, usr_code);
